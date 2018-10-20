@@ -9,6 +9,7 @@ $(document).ready(function(){
     guessesleft = 10;
     //a function to reset all the variables
     function reset(){
+        //add some time before next turn
         setTimeout(
             function() 
             {
