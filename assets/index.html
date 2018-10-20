@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>The Psychic Game</h1>
+    <h2>What is the letter im thinking of motherfucker?</h2>
+    <p> Wins =</p> <span id="win"></span> <br>
+    <p>Loss =</p><span id="loss"></span> <br>
+    <p>Already Guessed Letters =</p><span id="agl"></span> <br>
+    <p>Guesses left :</p><span id="gl"></span><br>
+
+    <script>
+    
+        var wins=["a","r","t","i","b","l","p","o","q"];
+
+        var random=Math.floor(Math.random()*9);
+
+        var cc=wins[random];
+
+        var win=document.getElementById("win");
+        var loss=document.getElementById("loss");
+        var guessed = document.getElementById("agl");
+        var lft = document.getElementById("gl");
+        var w=0,l=0;
+        var cont = 9;
+
+        function reset(){
+            cont=9;
+            lft.textContent = cont;
+            guessed.textContent = "";
+        }
+        document.onkeyup=function(event){
+            var letter = event.key;
+            guessed.textContent +=letter+ ", ";
+            lft.textContent = --cont;
+            if(letter == cc){
+                w++;
+                win.textContent = w;
+                reset();
+            }else if(cont == 0){
+                console.log(cont);
+                l++;
+                loss.textContent =l;
+                reset();
+            }
+        }
+            
+            
+    
+    </script>
+
+
+
+</body>
+</html>

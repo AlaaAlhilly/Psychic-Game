@@ -6,35 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Word Guess Game</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/game.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 <body>
     <div class="container">
-        <div class="title">
-            <h1>HANGMAN</h1>
-        </div>
-        <div class="content">
-            <div class="right">
-                <div class="image">
-                    <img  id="gimg">
-                </div>
-                <div class="music">
-                    <audio ></audio>
-                </div>
-            </div>
-            <div class="left">
-                <div class="press">
-                    <h2>PRESS ANY KEY TO GET STARTED</h2>
-                    <h2>WINS:  <span id="wins"></span></h2>
-                    <h2>CURRENT WORD</h2><br>
-                    <h6></h6>
-                    <h2>NUMBER OF GUESSES REMAINING</h2><br>
-                    <h2 id="grno"></h2>
-                    <h2>LETTERS ALREADY GUESSED</h2>
-                    <h2 id="gl"></h2>
-                </div>
-            </div>
-        </div>
+            <div class="jumbotron">
+                    <h1 class="display-4 text-center">PSYCHIC GAME</h1>
+                    <p class="lead text-center">Guess what letter I am thinking of and win the lottery</p>
+                    <hr class="my-4">
+                    <p class="text-center">Be careful though you have only 10 tries</p>
+                  </div>
+        <table class="table" >
+            <tbody>
+              <tr>
+                <td>Wins</td>
+                <td id="winsno">0</td>
+              </tr>
+              <tr>
+                <td>Losses</td>
+                <td id="lossesno">0</td>
+              </tr>
+              <tr>
+                <td>Computer last Guess</td>
+                <td id="computerguess">-</td>
+              </tr>
+              <tr>
+                <td>Guesses left</td>
+                <td id="guessesleft">10</td>
+              </tr>
+              <tr>
+                <td>Letters already guessed</td>
+                <td id="alreadyguessed"></td>
+              </tr>
+            </tbody>
+          </table>
     </div>
 </body>
 </html>
