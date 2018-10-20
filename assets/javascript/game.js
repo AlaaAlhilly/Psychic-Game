@@ -9,6 +9,11 @@ $(document).ready(function(){
     guessesleft = 10;
     //a function to reset all the variables
     function reset(){
+        setTimeout(
+            function() 
+            {
+              return false;
+            }, 5000);
         $("#guessesleft").text(10);
         guessesleft = $("#guessesleft").text();
         $("#computerguess").text(computerchoice);
@@ -23,13 +28,11 @@ $(document).ready(function(){
         $("#guessesleft").text(--guessesleft);
         //check if there is no tries left
         if(guessesleft == 0){
-            alert("you lost");
             $("#lossesno").text(++loss);
             reset();
         }
         //check if the player hit the correct letter and win
         if(event.key == computerchoice){
-            alert("you won");
             $("#winsno").text(++win);
             reset();
         }
